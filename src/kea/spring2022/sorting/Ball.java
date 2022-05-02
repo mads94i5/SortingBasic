@@ -1,6 +1,6 @@
 package kea.spring2022.sorting;
 
-public class Ball {
+public class Ball implements ComparableObject {
     private int brightness;
 
     public Ball() {
@@ -9,6 +9,15 @@ public class Ball {
 
     public Ball(int brightness) {
         this.brightness = brightness%16;
+    }
+
+    @Override
+    public boolean sortedBy(ComparableObject otherObject) {
+        if (otherObject instanceof Ball) {
+            return brighterThan((Ball)otherObject);
+        } else {
+            return false;
+        }
     }
 
     public boolean brighterThan(Ball otherBall) {
