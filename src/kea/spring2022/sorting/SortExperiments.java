@@ -6,10 +6,10 @@ public class SortExperiments {
     public static void main(String[] args) {
         SortExperiments app = new SortExperiments();
         app.sort1();
-        //app.sort2();
+        app.sort2();
         //app.sortBalls1();
-        //app.sort3();
-        //app.sort4();
+        app.sort3();
+        app.sort4();
         //app.sortBalls2();
         //app.sortBalls3();
 
@@ -20,10 +20,18 @@ public class SortExperiments {
     }
 
     public void sort1() {
-        // TODO: Skriv koden til sorteringsøvelse 1 her i denne metode!
+        int[] tal = { 6, 2, 8, 1, 9, 21, 0, 3 };
+
+        System.out.println("Før sortering: " + Arrays.toString(tal));
+        Arrays.sort(tal);
+        System.out.println("Efter sortering: " + Arrays.toString(tal));
     }
     public void sort2() {
-        // TODO: Skriv koden til sorteringsøvelse 2 her i denne metode!
+        String[] ord = {"bonde","gård","abe","kat","hund","ko","and"};
+
+        System.out.println("Før sortering: " + Arrays.toString(ord));
+        Arrays.sort(ord);
+        System.out.println("Efter sortering: " + Arrays.toString(ord));
     }
 
     public void sortBalls1() {
@@ -33,16 +41,27 @@ public class SortExperiments {
             ballsarray[i] = new Ball();
         }
 
-        // TODO: Skriv koden til sorteringsøvelse ball-sorter1 her:
-
+        System.out.println("Før sortering: " + Arrays.toString(ballsarray));
+        Arrays.sort(ballsarray);
+        System.out.println("Efter sortering: " + Arrays.toString(ballsarray));
     }
 
     public void sort3() {
-        // TODO: Skriv koden til sorteringsøvelse 3 (med quicksort) her i denne metode!
+        int[] tal = { 6, 2, 8, 1, 9, 21, 0, 3 };
+
+        System.out.println("Før sortering: " + Arrays.toString(tal));
+        QuickSort sorter = new QuickSort();
+        sorter.sort(tal);
+        System.out.println("Efter sortering: " + Arrays.toString(tal));
     }
 
     public void sort4() {
-        // TODO: Skriv koden til sorteringsøvelse 4 (med quicksort) her i denne metode!
+        String[] ord = {"bonde","gård","abe","kat","hund","ko","and"};
+
+        System.out.println("Før sortering: " + Arrays.toString(ord));
+        QuickSortString sorter = new QuickSortString();
+        sorter.sort(ord);
+        System.out.println("Efter sortering: " + Arrays.toString(ord));
     }
 
     public void sortBalls2() {
@@ -52,8 +71,10 @@ public class SortExperiments {
             ballsarray[i] = new Ball();
         }
 
-        // TODO: Skriv koden til sorteringsøvelse ball-sorter2 (med quicksort) her:
-
+        System.out.println("Før sortering: " + Arrays.toString(ballsarray));
+        QuickSortBalls sorter = new QuickSortBalls();
+        sorter.sort(ballsarray);
+        System.out.println("Efter sortering: " + Arrays.toString(ballsarray));
     }
 
     public void sortBalls3() {
